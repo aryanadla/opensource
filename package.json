@@ -1,0 +1,18 @@
+{
+  "name": "c",
+  "version": "5.2.1",
+  "description": "5.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "opensource"
+  },
+  "keywords": [
+    "none"
+  ],
+  "author": "gad",
+  "license": "UNLICENSED"
+}
